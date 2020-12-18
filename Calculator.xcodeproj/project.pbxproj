@@ -15,6 +15,20 @@
 		7C698746258C539100129CC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C698744258C539100129CC5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		7C698754258C7A6B00129CC5 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = file.bplist;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		7C698736258C538F00129CC5 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C698739258C538F00129CC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,11 +80,11 @@
 		7C698750258C578400129CC5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7C698747258C539100129CC5 /* Info.plist */,
 				7C698739258C538F00129CC5 /* AppDelegate.swift */,
 				7C69873B258C538F00129CC5 /* SceneDelegate.swift */,
 				7C698742258C539100129CC5 /* Assets.xcassets */,
 				7C698744258C539100129CC5 /* LaunchScreen.storyboard */,
-				7C698747258C539100129CC5 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -87,6 +101,7 @@
 				7C698734258C538F00129CC5 /* Resources */,
 			);
 			buildRules = (
+				7C698754258C7A6B00129CC5 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -296,7 +311,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7ST6CK27XZ;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = "Calculator/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7ST6CK27XZ;
-				INFOPLIST_FILE = Calculator/Info.plist;
+				INFOPLIST_FILE = "Calculator/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
