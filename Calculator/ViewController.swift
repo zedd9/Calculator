@@ -7,11 +7,28 @@
 
 import UIKit
 
+var calculateCount = 0
+
 class ViewController: UIViewController {
 	
 	@IBOutlet private weak var display: UILabel!
 	
 	private var userIsIntheMiddleOfTyping : Bool = false
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		calculateCount += 1
+		print("Loaded up a new Calculator (count = \(calculateCount))")
+		brain.addUnarayOpeation(symbol: "Z")  { [weak weakSelf = self] in
+			weakSelf?.display.textColor = UIColor.red
+			return sqrt($0)
+		}
+	}
+	
+	deinit {
+		calculateCount -= 1
+		print("Calcuator left the heap (count = \(calculateCount))")
+	}
 	
 	@IBAction private func touchDigit(_ sender: UIButton) {
 		let digit = sender.currentTitle!
